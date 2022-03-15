@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-//import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 import './Card.css';
 
 export function Card({title, url, author, link}) {
@@ -8,8 +7,8 @@ export function Card({title, url, author, link}) {
         <article className="card">
             <h2>{title}</h2>
             <img src={url} alt=""/>
-            <p>Posted by {author}</p>
-            <a href={link} target="_blank" rel="noreferrer">see it on Reddit</a>
+            <p>Posted by <span>{author}</span></p>
+            <a href={link} target="_blank" rel="noreferrer">See it on Reddit</a>
         </article>
     );
 }
