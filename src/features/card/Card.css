@@ -1,14 +1,27 @@
 .card {
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
     max-width: 50%;
-    padding: 1rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    min-width: 280px;
+    overflow: scroll;
+    padding: 1.5rem;
+    margin: 1rem auto;
 }
 
-img {
+.card-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e6e6e6;
+    margin-top: 1rem;
+}
+
+.card-info>* {
+    padding: 0.5rem;
+}
+
+img, video {
     max-width: 100%;
+    border-radius: 8px;
 }

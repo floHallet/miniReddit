@@ -31,7 +31,7 @@ export function SearchResults() {
             setData(result);
             setIsLoading(false);
         });*/
-        dispatch(callAPI('javascript'));
+        dispatch(callAPI('kitty'));
         //console.log(data, isLoading);
     }, [dispatch]);
 
@@ -42,6 +42,11 @@ export function SearchResults() {
             {data.map((element, index) => {
                 return(<Card
                         key={index}
+                        hint={element.data.post_hint ? element.data.post_hint : ''}
+                        isSelf={element.data.is_self}
+                        selfText={element.data.selftext}
+                        isVideo={element.data.is_video}
+                        videoUrl={ element.data.is_video ? element.data.media.reddit_video.hls_url : ''}
                         title={isLoading ? 'FETCHING...' : element.data.title}
                         url={isLoading ? '' : element.data.url}
                         author={isLoading ? 'FETCHING' : element.data.author}
