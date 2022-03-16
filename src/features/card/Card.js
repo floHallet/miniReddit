@@ -5,18 +5,18 @@ export function Card({hint, isSelf, selfText, isVideo, videoUrl, title, url, aut
 
     let media;
     if (isSelf) {
-        media = <p>{selfText}</p>;
+        media = <p>{selfText}</p>
     } else if(isVideo) {
         media = (<video controls autoPlay muted>
-                    <source src={videoUrl}/>
+                    <source src={videoUrl} type="video/mp4"/>
                     Your browser does not support video.
-                </video>);
+                </video>)
     } else if(hint === "link"){
         media = <a href={url} target="_blank" rel="noreferrer">{url}</a>;
     } else if(hint === "image") {
         media = <img src={url} alt=""/>
     } else {
-        media = <p>{url}</p>;
+        media = <p>{url}</p>
     }
 
 
