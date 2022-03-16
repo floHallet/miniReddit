@@ -46,7 +46,7 @@ export function SearchResults() {
                         isSelf={element.data.is_self}
                         selfText={element.data.selftext}
                         isVideo={element.data.is_video}
-                        videoUrl={ element.data.is_video ? element.data.media.reddit_video.hls_url : ''}
+                        videoUrl={ element.data.is_video ? element.data.media.reddit_video.fallback_url : ''}
                         title={isLoading ? 'FETCHING...' : element.data.title}
                         url={isLoading ? '' : element.data.url}
                         author={isLoading ? 'FETCHING' : element.data.author}
