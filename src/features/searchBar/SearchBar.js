@@ -23,8 +23,19 @@ export function SearchBar() {
 
     return (
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Search Reddit..." value={searchTerm} onChange={handleChange} disabled={isLoading} required/>
-          <button type="submit" disabled={isLoading}><BsSearch className="search-icon" /></button>
+          <input 
+            type="text" 
+            aria-label="Search posts"
+            placeholder="Search Reddit..." 
+            value={searchTerm} 
+            onChange={handleChange} 
+            required/>
+          <button 
+            type="submit" 
+            aria-label="Search" 
+            disabled={isLoading}>
+            <BsSearch className="search-icon" />
+          </button>
         </form>
     );
 }

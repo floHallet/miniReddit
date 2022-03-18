@@ -11,4 +11,5 @@ button {
     border: none;
     background: white;
     vertical-align: bottom;
+    margin: 0.25rem;
 }

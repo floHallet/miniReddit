@@ -13,7 +13,12 @@ const initialState = {
 export const callAPI = createAsyncThunk(
     'searchResults/fetchData',
     async (searchTerm) => {
-        const url = 'https://www.reddit.com/search.json?q='+searchTerm;
+        let url;
+        if (searchTerm === 'init') {
+          url = 'https://www.reddit.com/r/pics.json'
+        } else {
+          url = 'https://www.reddit.com/search.json?q='+searchTerm;
+        }
         //console.log(url);
         try{
             const response = await fetch(url);
