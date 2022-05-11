@@ -17,7 +17,7 @@
   fill: purple;
   width: 2rem;
   height: 2rem;
-  padding: 5px;
+  padding: 5px 5px 5px 0;
 }
 
 span {
