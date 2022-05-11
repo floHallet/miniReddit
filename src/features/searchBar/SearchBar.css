@@ -7,6 +7,8 @@ form {
     width: 1.6rem;
     height: 1.6rem;
     margin: 0;
+    fill: black;
+    color: black;
 }
 
 button {
