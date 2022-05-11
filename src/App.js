@@ -1,5 +1,4 @@
 import React from 'react';
-//import logo from './logo.svg'; //<img src={logo} className="App-logo" alt="logo" />
 import { BsReddit } from 'react-icons/bs';
 import { SearchBar } from './features/searchBar/SearchBar';
 import { SearchResults } from './features/searchResults/SearchResults';

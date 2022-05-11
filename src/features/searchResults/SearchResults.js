@@ -24,7 +24,6 @@ export function SearchResults() {
                         key={element.data.id}
                         hint={element.data.post_hint ? element.data.post_hint : ''}
                         isSelf={element.data.is_self}
-                        //selfText={element.data.is_self ? element.data.selftext_html : ''}
                         isVideo={element.data.is_video}
                         videoUrl={ element.data.is_video && element.data.media ? element.data.media.reddit_video.fallback_url : ''}
                         title={isLoading ? '' : element.data.title}
